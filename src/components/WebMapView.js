@@ -57,7 +57,7 @@ export class WebMapView extends React.Component {
       // add sketch toolbar to top corner
       view.ui.add(sketch, "top-left")
       
-      // when polygon is created, calculate area and nominal power
+      // when polygon is created, calculate area
       sketch.on("create", function(event) {
         if (event.state === "complete") {
           let geometry = event.graphic.geometry.extent
@@ -65,12 +65,8 @@ export class WebMapView extends React.Component {
           // area in square meters, accounts for curve of Earth, rounded to nearest number
           let area = geometryEngine.geodesicArea(geometry, 109404)
 
-          // nominal power - see ReadMe for calculation assumptions
-          let nominalPower = (area * 0.15 * 1250 * 0.75)
-
           // add values to legend
           ReactDOM.render(area.toFixed(0) + " m^2", document.getElementById('area'));
-          ReactDOM.render(nominalPower.toFixed(0) + " kWh/year", document.getElementById('power'));
         }       
       });
       

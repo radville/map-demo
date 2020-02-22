@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Solar Calculator</h1>
+        <h1>Map Demo</h1>
       </header>
 
       <WebMapView />
