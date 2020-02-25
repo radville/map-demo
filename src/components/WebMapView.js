@@ -5,7 +5,6 @@
 
 import React from 'react';
 import { loadModules } from 'esri-loader';
-import ReactDOM from 'react-dom'
 
 export class WebMapView extends React.Component {
   constructor(props) {
@@ -14,8 +13,10 @@ export class WebMapView extends React.Component {
   }
 
   componentDidMount() {
+    console.log(this.props)
 
     // lazy load the required ArcGIS API for JavaScript modules and CSS
+    let me = this.props
     loadModules(['esri/Map', 
       'esri/views/MapView', 
       'esri/widgets/Search',
@@ -23,7 +24,7 @@ export class WebMapView extends React.Component {
       "esri/widgets/Sketch",
       "esri/geometry/geometryEngine"], { css: true })
     .then(([ArcGISMap, MapView, Search, GraphicsLayer, Sketch, geometryEngine]) => {
-
+      console.log(me)
       // create map
       const map = new ArcGISMap({
         basemap: 'topo-vector'
@@ -56,7 +57,7 @@ export class WebMapView extends React.Component {
 
       // add sketch toolbar to top corner
       view.ui.add(sketch, "top-left")
-      
+
       // when polygon is created, calculate area
       sketch.on("create", function(event) {
         if (event.state === "complete") {
@@ -66,9 +67,10 @@ export class WebMapView extends React.Component {
           let area = geometryEngine.geodesicArea(geometry, 109404)
 
           // add values to legend
-          ReactDOM.render(area.toFixed(0) + " m^2", document.getElementById('area'));
+          console.log(this.props)
+          // this.props.changeLegendValues(area)
         }       
-      });
+      }.bind(this));
       
     });
   }
@@ -82,8 +84,7 @@ export class WebMapView extends React.Component {
 
   render() {
     return (
-      <div className="webmap esri" ref={this.mapRef} />
-      
+     <div className="webmap esri" ref={this.mapRef} />      
     )
   }
 };

@@ -15,7 +15,7 @@ class MapContainer extends Component {
     render() {
         return (
             <div>
-                <WebMapView changeLegendValues={this.changeLegendValues} />
+                <WebMapView area={2} changeLegendValues={this.props.changeLegendValues} />
                 <Legend area={this.state.area} />
             </div>
         )
