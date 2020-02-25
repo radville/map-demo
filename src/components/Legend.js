@@ -6,7 +6,7 @@ const Legend = (props) => {
             <h4>Calculate Area</h4>
             Draw a polygon over the area you would like to measure.
             <br /><br />
-            <span className="label">Area:</span> {props.area} <span id="area"></span>
+            <span className="label">Area:</span> {props.area} m^2 <span id="area"></span>
         </div>
     );
 }

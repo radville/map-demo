@@ -68,7 +68,7 @@ export class WebMapView extends React.Component {
 
           // add values to legend
           console.log(this.props)
-          // this.props.changeLegendValues(area)
+          this.props.changeLegendValues(area)
         }       
       }.bind(this));
       
