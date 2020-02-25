@@ -1,20 +1,25 @@
 import React, { Component } from 'react';
-import WebMapView from './components/WebMapView';
-import Legend from './components/Legend';
+import WebMapView from '../components/WebMapView';
+import Legend from '../components/Legend';
 
 class MapContainer extends Component {
     constructor() {
+        super();
         this.state = { area: '' }
     }
 
-    function changeLegendValues = (area) => {
+    changeLegendValues = (area) => {
         this.setState({ area })
     }
 
     render() {
-        <div>
-            <WebMapView changeLegendValues={this.changeLegendValues} />
-            <Legend area={this.state.area} />
-        </div>
+        return (
+            <div>
+                <WebMapView changeLegendValues={this.changeLegendValues} />
+                <Legend area={this.state.area} />
+            </div>
+        )
     }
 }
+
+export default MapContainer;
