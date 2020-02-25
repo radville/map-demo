@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
-import WebMapView from './components/WebMapView';
-import Legend from './components/Legend';
+import MapContainer from './containers/MapContainer';
 
 function App() {
   return (
@@ -10,8 +9,7 @@ function App() {
         <h1>Map Demo</h1>
       </header>
 
-      <WebMapView />
-      <Legend />
+      <MapContainer />
     </div>
   );
 }
