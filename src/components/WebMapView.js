@@ -13,7 +13,7 @@ export class WebMapView extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.props)
+    console.log(this.props.changeLegendValues)
 
     // lazy load the required ArcGIS API for JavaScript modules and CSS
     let me = this.props
