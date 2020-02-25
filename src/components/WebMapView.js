@@ -13,10 +13,8 @@ export class WebMapView extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.props.changeLegendValues)
 
     // lazy load the required ArcGIS API for JavaScript modules and CSS
-    let me = this.props
     loadModules(['esri/Map', 
       'esri/views/MapView', 
       'esri/widgets/Search',
@@ -24,7 +22,6 @@ export class WebMapView extends React.Component {
       "esri/widgets/Sketch",
       "esri/geometry/geometryEngine"], { css: true })
     .then(([ArcGISMap, MapView, Search, GraphicsLayer, Sketch, geometryEngine]) => {
-      console.log(me)
       // create map
       const map = new ArcGISMap({
         basemap: 'topo-vector'
@@ -67,7 +64,6 @@ export class WebMapView extends React.Component {
           let area = geometryEngine.geodesicArea(geometry, 109404)
 
           // add values to legend
-          console.log(this.props)
           this.props.changeLegendValues(area)
         }       
       }.bind(this));
