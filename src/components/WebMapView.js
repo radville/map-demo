@@ -31,14 +31,14 @@ export class WebMapView extends React.Component {
       });
       
       // add searchbar 
-      let search = new Search({
+      let searchBar = new Search({
         view: view
       });
-      view.ui.add(search, "top-right");
+      view.ui.add(searchBar, "top-right");
 
       // add area measurement tool
       let measurementWidget = new AreaMeasurement2D({
-        view:view
+        view: view
       })
       view.ui.add(measurementWidget, "bottom-left");
       
