@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import MapContainer from './containers/MapContainer';
+import WebMapView from './components/WebMapView';
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
         <h1>Map Demo</h1>
       </header>
 
-      <MapContainer />
+      <WebMapView />
     </div>
   );
 }

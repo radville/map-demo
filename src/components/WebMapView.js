@@ -9,6 +9,7 @@ import { loadModules } from 'esri-loader';
 export class WebMapView extends React.Component {
   constructor(props) {
     super(props);
+    // React.createRef() gets a reference to the rendered DOM element to assign to the View
     this.mapRef = React.createRef();
   }
 
@@ -18,21 +19,20 @@ export class WebMapView extends React.Component {
     loadModules(['esri/Map', 
       'esri/views/MapView', 
       'esri/widgets/Search',
-      "esri/layers/GraphicsLayer",
-      "esri/widgets/Sketch",
-      "esri/geometry/geometryEngine"], { css: true })
-    .then(([ArcGISMap, MapView, Search, GraphicsLayer, Sketch, geometryEngine]) => {
+      'esri/widgets/AreaMeasurement2D'], { css: true })
+    .then(([ArcGISMap, MapView, Search, AreaMeasurement2D]) => {
       // create map
       const map = new ArcGISMap({
         basemap: 'topo-vector'
       });
 
+
       // add map view
-      let view = new MapView({
+      const view = new MapView({
         container: this.mapRef.current,
         map: map,
-        center: [-100, 38],
-        zoom: 4
+        center: [-72, 42],
+        zoom: 7
       });
       
       // add searchbar 
@@ -41,32 +41,11 @@ export class WebMapView extends React.Component {
       });
       view.ui.add(search, "top-right");
 
-      // add graphics layer to be used by sketch toolbar
-      let graphicsLayer = new GraphicsLayer();
-      map.add(graphicsLayer)
-
-      // Add the Sketch toolbar to draw polygons
-      let sketch = new Sketch({
-        view: view,
-        layer: graphicsLayer,
-        availableCreateTools: ["polyline", "polygon", "rectangle"],
+      // add area measurement tool
+      let measurementWidget = new AreaMeasurement2D({
+        view:view
       })
-
-      // add sketch toolbar to top corner
-      view.ui.add(sketch, "top-left")
-
-      // when polygon is created, calculate area
-      sketch.on("create", function(event) {
-        if (event.state === "complete") {
-          let geometry = event.graphic.geometry.extent
-
-          // area in square meters, accounts for curve of Earth, rounded to nearest number
-          let area = geometryEngine.geodesicArea(geometry, 109404)
-
-          // add values to legend
-          this.props.changeLegendValues(area)
-        }       
-      }.bind(this));
+      view.ui.add(measurementWidget, "bottom-left");
       
     });
   }
