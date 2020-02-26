@@ -2,8 +2,8 @@ import React from 'react';
 import { loadModules } from 'esri-loader';
 
 export class WebMapView extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     // React.createRef() gets a reference to the rendered DOM element to assign to the View
     this.mapRef = React.createRef();
   }
