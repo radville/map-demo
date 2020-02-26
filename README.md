@@ -1,6 +1,6 @@
 # map-demo
 
-This ArcGIS map demo allows users to search for a location on the map, draw a polygon over any area, and see the land area calculation.
+This ArcGIS map demo allows users to search for a location on the map, draw a polygon over any area, and see the land area and perimeter calculation.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 
