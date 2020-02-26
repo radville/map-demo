@@ -1,8 +1,3 @@
-// Adapted from ArcGIS tutorials, including:
-// "Using the ArcGIS API for JavaScript with React"
-// found here: https://developers.arcgis.com/javascript/latest/guide/react/
-// and "Draw Graphics" at https://developers.arcgis.com/labs/javascript/draw-graphics/
-
 import React from 'react';
 import { loadModules } from 'esri-loader';
 
