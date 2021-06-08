@@ -3740,20 +3740,15 @@ dojo-webpack-plugin@^2.8.9:
     tmp "0.0.30"
     webpack-plugin-compat "1.0.3"
 
-dojo@1.14.2:
+dojo@1.14.2, "dojo@github:Esri/dojo#v1.14.2/esri-3.28.0":
   version "1.14.2"
-  resolved "https://registry.yarnpkg.com/dojo/-/dojo-1.14.2.tgz#45ca90b19068230e1486f68b1531fa4ce0e21280"
-  integrity sha512-TI+Ytgfh/VfmHWERp45Jte6NFMdoJTPsvUP/uzJUvAXET8FP2h442LePWWJ/q/xZ4V0V8OtdJhx8It/GB+Zbxg==
+  uid bed2e881e70d2d5f52a7423af2ec1f6036eb9b0c
+  resolved "https://codeload.github.com/Esri/dojo/tar.gz/bed2e881e70d2d5f52a7423af2ec1f6036eb9b0c"
 
 dojo@^1.9.0:
   version "1.16.2"
   resolved "https://registry.yarnpkg.com/dojo/-/dojo-1.16.2.tgz#5cc7bcb80afca1b057560ce5ca6fb26275a4785d"
   integrity sha512-cgiT6WFAmcc1p95X7HPPVq3pM+qD4eB+DRWI+z04IWlGh5v4h9wqOdz1s+2mG7x7UYz+EzoGyLB87GDgGUOtIQ==
-
-"dojo@github:Esri/dojo#v1.14.2/esri-3.28.0":
-  version "1.14.2"
-  uid bed2e881e70d2d5f52a7423af2ec1f6036eb9b0c
-  resolved "https://codeload.github.com/Esri/dojo/tar.gz/bed2e881e70d2d5f52a7423af2ec1f6036eb9b0c"
 
 "dojox@github:Esri/dojox#v1.14.2/esri-3.28.0":
   version "1.14.2"
@@ -6715,9 +6710,9 @@ memory-fs@^0.5.0:
     readable-stream "^2.0.1"
 
 merge-deep@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/merge-deep/-/merge-deep-3.0.2.tgz#f39fa100a4f1bd34ff29f7d2bf4508fbb8d83ad2"
-  integrity sha512-T7qC8kg4Zoti1cFd8Cr0M+qaZfOwjlPDEdZIIPPB2JZctjaPM4fX+i7HOId69tAti2fvO6X5ldfYUONDODsrkA==
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/merge-deep/-/merge-deep-3.0.3.tgz#1a2b2ae926da8b2ae93a0ac15d90cd1922766003"
+  integrity sha512-qtmzAS6t6grwEkNrunqTBdn0qKwFgNWvlxUbAV8es9M7Ot1EbyApytCnvE0jALPa46ZpKDUo527kKiaWplmlFA==
   dependencies:
     arr-union "^3.1.0"
     clone-deep "^0.2.4"
