@@ -3,9 +3,9 @@
 
 
 "@arcgis/webpack-plugin@^4.14.1":
-  version "4.14.2"
-  resolved "https://registry.yarnpkg.com/@arcgis/webpack-plugin/-/webpack-plugin-4.14.2.tgz#8142e68b47f7c2d9a5d9c269d9752c397592f841"
-  integrity sha512-fsmM3VYKfjxA6k79kHkgmbxH9tnXnmbgaWfJpBWWp+yBr1913+mbazDm+JQcOypjzSYmrxwiQX2+U2peOIWz/A==
+  version "4.14.1"
+  resolved "https://registry.yarnpkg.com/@arcgis/webpack-plugin/-/webpack-plugin-4.14.1.tgz#d01e8f02996c9d989433247542ceb855357f6a4f"
+  integrity sha512-eHHDu3ZLPFEPKzUzw1LdPG/cZtG65DGCQoJz7GCcwNZw0mjuO8MW7xZxjlCYZrJbvGhuOeltq5O4S3+Q2tgp0Q==
   dependencies:
     arcgis-js-api "~4.14.0"
     copy-webpack-plugin "^5.0.3"
@@ -3740,20 +3740,15 @@ dojo-webpack-plugin@^2.8.9:
     tmp "0.0.30"
     webpack-plugin-compat "1.0.3"
 
-dojo@1.14.2:
+dojo@1.14.2, "dojo@github:Esri/dojo#v1.14.2/esri-3.28.0":
   version "1.14.2"
-  resolved "https://registry.yarnpkg.com/dojo/-/dojo-1.14.2.tgz#45ca90b19068230e1486f68b1531fa4ce0e21280"
-  integrity sha512-TI+Ytgfh/VfmHWERp45Jte6NFMdoJTPsvUP/uzJUvAXET8FP2h442LePWWJ/q/xZ4V0V8OtdJhx8It/GB+Zbxg==
+  uid bed2e881e70d2d5f52a7423af2ec1f6036eb9b0c
+  resolved "https://codeload.github.com/Esri/dojo/tar.gz/bed2e881e70d2d5f52a7423af2ec1f6036eb9b0c"
 
 dojo@^1.9.0:
   version "1.16.2"
   resolved "https://registry.yarnpkg.com/dojo/-/dojo-1.16.2.tgz#5cc7bcb80afca1b057560ce5ca6fb26275a4785d"
   integrity sha512-cgiT6WFAmcc1p95X7HPPVq3pM+qD4eB+DRWI+z04IWlGh5v4h9wqOdz1s+2mG7x7UYz+EzoGyLB87GDgGUOtIQ==
-
-"dojo@github:Esri/dojo#v1.14.2/esri-3.28.0":
-  version "1.14.2"
-  uid bed2e881e70d2d5f52a7423af2ec1f6036eb9b0c
-  resolved "https://codeload.github.com/Esri/dojo/tar.gz/bed2e881e70d2d5f52a7423af2ec1f6036eb9b0c"
 
 "dojox@github:Esri/dojox#v1.14.2/esri-3.28.0":
   version "1.14.2"
