@@ -3740,20 +3740,15 @@ dojo-webpack-plugin@^2.8.9:
     tmp "0.0.30"
     webpack-plugin-compat "1.0.3"
 
-dojo@1.14.2:
+dojo@1.14.2, "dojo@github:Esri/dojo#v1.14.2/esri-3.28.0":
   version "1.14.2"
-  resolved "https://registry.yarnpkg.com/dojo/-/dojo-1.14.2.tgz#45ca90b19068230e1486f68b1531fa4ce0e21280"
-  integrity sha512-TI+Ytgfh/VfmHWERp45Jte6NFMdoJTPsvUP/uzJUvAXET8FP2h442LePWWJ/q/xZ4V0V8OtdJhx8It/GB+Zbxg==
+  uid bed2e881e70d2d5f52a7423af2ec1f6036eb9b0c
+  resolved "https://codeload.github.com/Esri/dojo/tar.gz/bed2e881e70d2d5f52a7423af2ec1f6036eb9b0c"
 
 dojo@^1.9.0:
   version "1.16.2"
   resolved "https://registry.yarnpkg.com/dojo/-/dojo-1.16.2.tgz#5cc7bcb80afca1b057560ce5ca6fb26275a4785d"
   integrity sha512-cgiT6WFAmcc1p95X7HPPVq3pM+qD4eB+DRWI+z04IWlGh5v4h9wqOdz1s+2mG7x7UYz+EzoGyLB87GDgGUOtIQ==
-
-"dojo@github:Esri/dojo#v1.14.2/esri-3.28.0":
-  version "1.14.2"
-  uid bed2e881e70d2d5f52a7423af2ec1f6036eb9b0c
-  resolved "https://codeload.github.com/Esri/dojo/tar.gz/bed2e881e70d2d5f52a7423af2ec1f6036eb9b0c"
 
 "dojox@github:Esri/dojox#v1.14.2/esri-3.28.0":
   version "1.14.2"
@@ -6483,12 +6478,12 @@ load-json-file@^4.0.0:
     strip-bom "^3.0.0"
 
 loader-fs-cache@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/loader-fs-cache/-/loader-fs-cache-1.0.2.tgz#54cedf6b727e1779fd8f01205f05f6e88706f086"
-  integrity sha512-70IzT/0/L+M20jUlEqZhZyArTU6VKLRTYRDAYN26g4jfzpJqjipLL3/hgYpySqI9PwsVRHHFja0LfEmsx9X2Cw==
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/loader-fs-cache/-/loader-fs-cache-1.0.3.tgz#f08657646d607078be2f0a032f8bd69dd6f277d9"
+  integrity sha512-ldcgZpjNJj71n+2Mf6yetz+c9bM4xpKtNds4LbqXzU/PTdeAX0g3ytnU1AJMEcTk2Lex4Smpe3Q/eCTsvUBxbA==
   dependencies:
     find-cache-dir "^0.1.1"
-    mkdirp "0.5.1"
+    mkdirp "^0.5.1"
 
 loader-runner@^2.4.0:
   version "2.4.0"
@@ -6834,15 +6829,10 @@ minimatch@3.0.4, minimatch@^3.0.4:
   dependencies:
     brace-expansion "^1.1.7"
 
-minimist@0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d"
-  integrity sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=
-
-minimist@^1.1.1, minimist@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
-  integrity sha1-o1AIsg9BOD7sH7kU9M1d95omQoQ=
+minimist@^1.1.1, minimist@^1.2.0, minimist@^1.2.6:
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.8.tgz#c1a464e7693302e082a075cee0c057741ac4772c"
+  integrity sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==
 
 minipass-collect@^1.0.2:
   version "1.0.2"
@@ -6904,12 +6894,12 @@ mixin-object@^2.0.1:
     for-in "^0.1.3"
     is-extendable "^0.1.1"
 
-mkdirp@0.5.1, mkdirp@^0.5.1, mkdirp@~0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
-  integrity sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
+mkdirp@^0.5.1, mkdirp@~0.5.1:
+  version "0.5.6"
+  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.6.tgz#7def03d2432dcae4ba1d611445c48396062255f6"
+  integrity sha512-FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw==
   dependencies:
-    minimist "0.0.8"
+    minimist "^1.2.6"
 
 moment@2.24.0:
   version "2.24.0"
